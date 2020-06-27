@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -x
+set -e
+
+npm install -g gulp-cli
+npm install
+gulp build
+
