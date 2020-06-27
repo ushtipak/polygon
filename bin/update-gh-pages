@@ -16,7 +16,7 @@ rm -r assets node_modules *.html
 mv dist/* .
 
 git add .
-git commit -am "updated GH Pages"
+git commit -m "updated GH Pages"
 
 exit_code=$?
 echo "exit_code ${exit_code}"
