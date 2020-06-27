@@ -12,13 +12,13 @@ npm install
 gulp build
 
 git checkout "gh-pages"
-rm -r assets *.html
+rm -r assets node_modules *.html
 mv dist/* .
-
-rm node_modules -rf
 
 git add .
 git commit -am "updated GH Pages"
+[[ $? -ne 0 ]] && echo "nothing to commit" && exit 0
+
 git remote set-url "origin" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git push --force-with-lease "origin" "gh-pages"
 
