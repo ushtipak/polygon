@@ -12,9 +12,8 @@ npm install
 gulp build
 
 git checkout "gh-pages"
-ls
-ls dist/*
-mv -f dist/* .
+rm -r dist *.html
+mv dist/* .
 
 git add .
 git commit -am "updated GH Pages"
