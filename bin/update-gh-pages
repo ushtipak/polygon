@@ -15,6 +15,8 @@ git checkout "gh-pages"
 rm -r assets *.html
 mv dist/* .
 
+rm node_modules -rf
+
 git add .
 git commit -am "updated GH Pages"
 git remote set-url "origin" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
