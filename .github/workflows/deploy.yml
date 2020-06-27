@@ -1,0 +1,16 @@
+name: Deploy to GitHub Pages
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+            - run: cat /etc/issue
+              env:
+                GITHUB_TOKEN: ${{ secrets.github_token }}
+
