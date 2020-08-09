@@ -7,6 +7,7 @@ cd "$GITHUB_WORKSPACE"
 npm install
 gulp build
 
+git stash
 git checkout "gh-pages"
 rm -r assets node_modules *.html
 mv dist/* .
